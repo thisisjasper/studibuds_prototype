@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StudiBuds" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#9BABA7</item>
+        <item name="colorPrimaryVariant">#C5CDC8</item>
+        <item name="colorOnPrimary">#EFF1EE</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#72898B</item>
+        <item name="colorSecondaryVariant">#4E6871</item>
+        <item name="colorOnSecondary">#2F4858</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
