@@ -1,51 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFF1EE"
-    tools:context=".LoginOrRegisterActivity">
+    tools:context=".LoginOrRegisterActivity"
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    android:paddingTop="200dp">
 
-    <ScrollView
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/studibuds_landscape"
+        android:contentDescription="Logo of Studibuds"/>
+
+    <Button
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="50dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Login"
+        android:background="#4E6871"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/studibuds_landscape" />
-
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/btnRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Button" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Register"
+        android:background="#4E6871"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</LinearLayout>
