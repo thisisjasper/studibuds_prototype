@@ -1,6 +1,8 @@
 package com.jasperzj.studibuds
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,9 +22,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ProfileFragment : Fragment() {
+    private lateinit var itemImage: ImageView
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private val PICK_IMAGE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +45,34 @@ class ProfileFragment : Fragment() {
         val item_discordTag = view.findViewById<TextView>(R.id.item_discordTag)
         val item_description = view.findViewById<TextView>(R.id.item_description)
         val item_nickname = view.findViewById<TextView>(R.id.item_nickname)
-        val item_image = view.findViewById<ImageView>(R.id.item_image)
+        itemImage = view.findViewById<ImageView>(R.id.item_image)
+        if (AppData.imageUri == null) {
+            itemImage.setOnClickListener {
+                val intent = Intent()
+                intent.type = "image/*"
+                intent.action = Intent.ACTION_GET_CONTENT
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE)
+            }
+        } else {
+            itemImage.setImageURI(AppData.imageUri)
+        }
         item_discordTag.text = AppData.discordTag
         item_description.text = AppData.description
         item_nickname.text = AppData.nickname
         return view
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == PICK_IMAGE) {
+            try {
+                val imgUri = data!!.data
+                this.itemImage.setImageURI(imgUri)
+                AppData.imageUri = imgUri
+            } catch(e: java.lang.Exception) {
+
+            }
+        }
     }
 
     companion object {
