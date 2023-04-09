@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFF1EE"
-    tools:context=".RegistrationActivity"
+    tools:context=".LoginActivity"
     android:orientation="vertical"
     android:paddingLeft="35dp"
     android:paddingRight="35dp"
@@ -13,7 +13,7 @@
 
     <ImageView
         android:layout_marginTop="50dp"
-        android:id="@+id/imageView"
+        android:id="@+id/loginImageView"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_gravity="center_horizontal"
@@ -21,71 +21,73 @@
         android:contentDescription="Image of clipboard"/>
 
     <TextView
-        android:id="@+id/titleEmail"
+        android:id="@+id/loginTitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration"
+        android:text="Login"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:textColor="#2F4858"/>
 
     <TextView
-        android:id="@+id/titlePassword"
+        android:id="@+id/loginTitleEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email:"
         android:textColor="#2f4858"/>
 
     <EditText
-        android:id="@+id/emailText"
+        android:id="@+id/loginEmailText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/loginPasswordTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password:"
         android:textColor="#2f4858"/>
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/loginPasswordText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPassword" />
     <TextView
-        android:id="@+id/titleNickname"
+        android:id="@+id/loginNicknameTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nickname:"
+        android:text="Password:"
         android:textColor="#2f4858"/>
 
     <EditText
-        android:id="@+id/nicknameText"
+        android:id="@+id/loginNicknameText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:ems="10"/>
-
+        android:ems="10"
+        android:inputType="textPassword" />
     <TextView
-        android:id="@+id/titleDiscordTag"
+        android:id="@+id/loginDiscordTagTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Discord Tag:"
+        android:text="Password:"
         android:textColor="#2f4858"/>
 
     <EditText
-        android:id="@+id/discordTagText"
+        android:id="@+id/loginDiscordTagText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:ems="10"/>
+        android:ems="10"
+        android:inputType="textPassword" />
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/loginBtnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Log in"
         android:background="#4E6871"
         android:layout_marginTop="50dp"
         android:padding="12dp"/>

@@ -17,11 +17,12 @@ class LoginOrRegisterActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             this.startActivity(intent)
+            finish()
         }
         btnLogin.setOnClickListener {
-//            TODO
-//            val intent = Intent(this, Login::class.java)
-//            this.startActivity(intent)
+            val intent = Intent(this, LoginActivity::class.java)
+            this.startActivity(intent)
+            finish()
         }
     }
 }
